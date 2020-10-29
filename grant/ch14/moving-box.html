@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Moving Box</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <style>
+        .container {
+            margin: 2%;
+            padding: 1%;
+            border: 1px solid;
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            left: 0;
+            height: 10px;
+            width: 10px;
+            background-color: green;
+            transition: all 4s linear;
+        }
+
+        .container:hover .box {
+            left: 99%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <p>
+            This demo should render a small 
+            green box in the top, left corner 
+            of the page. When you hover over 
+            the container, the box transitions 
+            to the right. Notice that it moves 
+            at a constant, steady speed.
+        </p>
+        <p>
+            This demo illustrates an element 
+            moving across the screen by 
+            absolutely positioning it and 
+            transitioning the left property. 
+            There are, however, performance 
+            reasons to avoid transitioning 
+            certain properties, including left. 
+            I’ll cover these issues in the 
+            following chapter, along with a 
+            better alternative using transforms.
+        </p>
+    </div>
+</body>
+
+</html>

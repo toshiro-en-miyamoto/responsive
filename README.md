@@ -7,3 +7,6 @@
 
 # Coulson, The HTML and CSS Workshop
 - Float, Flex, and Grid (chapter 2)
+
+# Grant, CSS in Depth
+- Transition (chapter 14)
