@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 1.5: The inline-block layout</title>
+    <link rel="stylesheet" href="common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .cards {
+            margin: 0 -10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .cards li {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(33.333333333% - 30px);
+            background-color: #fff0f6;
+            border: 1px solid #fcc2d7;
+            margin: 0 10px 20px 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>FIG 1.5: The inline-block layout</h1>
+<section class="example clearfix">
+    <ul class="cards">
+        <li>
+            <h2>Card 1</h2>
+            <p>
+                Floated items will always rise to the top. 
+                This means that we can use floats to create multiple columns.
+            </p>
+            <p>
+                This card now has some additional content.
+            </p>
+        </li>
+        <li>
+            <h2>Card 2</h2>
+            <p>
+                Floated items will always rise to the top. 
+                This means that we can use floats to create multiple columns.
+            </p>
+        </li>
+        <li>
+            <h2>Card 3</h2>
+            <p>
+                Floated items will always rise to the top. 
+                This means that we can use floats to create multiple columns.
+            </p>
+        </li>
+        <li>
+            <h2>Card 4</h2>
+            <p>
+                Floated items will always rise to the top. 
+                This means that we can use floats to create multiple columns.
+            </p>
+        </li>
+        <li>
+            <h2>Card 5</h2>
+            <p>
+                Floated items will always rise to the top. 
+                This means that we can use floats to create multiple columns.
+            </p>
+        </li>
+        <li>
+            <h2>Card 6</h2>
+            <p>
+                Floated items will always rise to the top. 
+                This means that we can use floats to create multiple columns.
+            </p>
+        </li>
+    </ul>
+</section>
+<section class="code">
+    <table>
+        <tr>
+            <td>FIG 1.4: a messy set</td>
+            <td>FIG 1.5: inline-block</td>
+        </tr>
+        <tr>
+            <td>
+                <pre>
+.cards li {
+    float: left;
+
+    width: calc(33.333333333% - 20px);
+                </pre>
+            </td>
+            <td>
+                <pre>
+.cards li {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.333333333% - 30px);
+                </pre>
+            </td>
+        </tr>
+    </table>
+    <p>
+        One aspect of being inline is that inline elements preserve white space; 
+        if they didn’t, every word in a sentence would run together, 
+        since the spaces between words would not be maintained. 
+        If we use the same method to calculate the size of the item widths 
+        as we did for floats, we find that we only get two items on each row. 
+        If any white space gets into the document, 
+        we’ll end up with only two cards per line again.
+    </p>
+</section>
+
+</body>
+</html>

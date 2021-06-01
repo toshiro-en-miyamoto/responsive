@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 1.6: The layout using display-table</title>
+    <link rel="stylesheet" href="common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .wrapper {
+            display: table;
+            border-spacing: 20px;
+            margin: -20px;
+        }
+
+        .cards {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: table-row;
+        }
+
+        .cards li {
+            display: table-cell;
+            vertical-align: center;
+            background-color: #fff0f6;
+            border: 1px solid #fcc2d7;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>FIG 1.6: The layout using display-table</h1>
+<section class="example">
+    <div class="wrapper">
+        <ul class="cards">
+            <li>
+                <h2>Card 1</h2>
+                <p>
+                    Floated items will always rise to the top. 
+                    This means that we can use floats to create multiple columns.
+                </p>
+                <p>
+                    This card now has some additional content.
+                </p>
+            </li>
+            <li>
+                <h2>Card 2</h2>
+                <p>
+                    Floated items will always rise to the top. 
+                    This means that we can use floats to create multiple columns.
+                </p>
+            </li>
+            <li>
+                <h2>Card 3</h2>
+                <p>
+                    Floated items will always rise to the top. 
+                    This means that we can use floats to create multiple columns.
+                </p>
+            </li>
+        </ul>
+        <ul class="cards">
+            <li>
+                <h2>Card 4</h2>
+                <p>
+                    Floated items will always rise to the top. 
+                    This means that we can use floats to create multiple columns.
+                </p>
+            </li>
+            <li>
+                <h2>Card 5</h2>
+                <p>
+                    Floated items will always rise to the top. 
+                    This means that we can use floats to create multiple columns.
+                </p>
+            </li>
+            <li>
+                <h2>Card 6</h2>
+                <p>
+                    Floated items will always rise to the top. 
+                    This means that we can use floats to create multiple columns.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="code">
+    <p>
+        With our floated and our inline-block layouts, we can create neat rows 
+        with some compromises, but any background or border on items will only 
+        extend as far as the content does. 
+        This produces a ragged edge on our rows.
+    </p>
+    <p>
+        A legacy method for creating a multiple-column layout exists that can 
+        address this issue; it uses table layout on items that are not HTML tables.
+    </p>
+    <figure>
+        <code>display: table</code>
+    </figure>
+    <p>
+        Inside an HTML table, we have <code>tr</code> elements 
+        (which have the display value of <code>table-row</code> in CSS) and 
+        <code>td</code> elements (which have the value <code>table-cell</code>). 
+        While these values were designed for styling HTML tables, 
+        they can be applied to things that are not, semantically speaking, 
+        tables &mdash; <code>div</code>s, <code>list</code>s, and so on.
+    </p>
+
+    <table>
+        <tr>
+            <td>FIG 1.5: inline-block</td>
+            <td>FIG 1.6: display-table</td>
+        </tr>
+        <tr>
+            <td>
+                <pre>
+
+
+
+
+
+
+.cards {
+    margin: 0 -10px;
+    padding: 0;
+    list-style: none;
+
+}
+
+.cards li {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.333333333% - 30px);
+    background-color: #fff0f6;
+    border: 1px solid #fcc2d7;
+    margin: 0 10px 20px 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+                </pre>
+            </td>
+            <td>
+                <pre>
+.wrapper {
+    display: table;
+    border-spacing: 20px;
+    margin: -20px;
+}
+
+.cards {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table-row;
+}
+
+.cards li {
+    display: inline-block;
+    vertical-align: top;
+
+    background-color: #fff0f6;
+    border: 1px solid #fcc2d7;
+
+    padding: 10px;
+    border-radius: 5px;
+}
+                </pre>
+            </td>
+        </tr>
+    </table>
+    <p>
+        I add a wrapper around the <code>ul</code> element and 
+        give it the display property with a value of <code>table</code>. 
+        This tells the browser that the contents of the wrapper will be laid out 
+        as if they were a table. 
+        Turning the <code>ul</code> element into a row causes the list items to 
+        lay out in one row. 
+        Therefore, I need to split the list into two lists and 
+        set the value of <code>display</code> on a <code>ul</code> element to 
+        <code>table-row</code>. 
+        The list items become table cells using the value <code>table-cell</code>.
+    </p>
+</section>
+
+</body>
+</html>
