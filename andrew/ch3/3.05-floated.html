@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 3.5: Floated items</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .icon-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 450px;
+        }
+        .icon-list li {
+            clear: left;
+            margin: 1em 0;
+            border-bottom: 1px solid #e5dbff;
+        }
+        .icon-list img {
+            float: left;
+            display: block;
+            margin: 0 10px 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<section class="example">
+    <ul class="icon-list">
+        <li>
+            <img src="../images/aba-logo_small.png" alt="A Book Apart Logo">
+            <p>
+                This image has been floated left, which takes it out of flow 
+                and moves it up as far as it can go. 
+                The text will then wrap around the right and bottom of the image. 
+                A margin applied to the image creates space between floated item and text.
+            </p>
+        </li>
+        <li>
+            <img src="../images/aba-logo_small.png" alt="A Book Apart Logo">
+            <p>
+                This image has been floated left, which takes it out of flow 
+                and moves it up as far as it can go. 
+                The text will then wrap around the right and bottom of the image. 
+                A margin applied to the image creates space between floated item and text.
+            </p>
+        </li>
+    </ul>
+</section>
+<section class="code">
+    <pre>
+        .icon-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 450px;
+        }
+        .icon-list li {
+            clear: left;
+            margin: 1em 0;
+            border-bottom: 1px solid #e5dbff;
+        }
+        .icon-list img {
+            float: left;
+            display: block;
+            margin: 0 10px 10px 0;
+        }
+    </pre>
+</section>
+
+</body>
+</html>

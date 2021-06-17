@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 3.4: Behind out-of-flow items</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .container {
+            width: 400px;
+            border: 2px solid #e5dbff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .box {
+            float: left;
+            width: 200px;
+            border: 2px solid #e5dbff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .container p {
+            backgroud-color: #e5dbff;
+        }
+    </style>
+</head>
+<body>
+<section class="example">
+    <p>
+        Elements that are in flow appear per their formatting model. 
+        <ul>
+            <li>
+                The formatting model for block-level elements means 
+                they take the full width of the container 
+                (if not otherwise restricted) and appear on a new line. 
+            </li>
+            <li>
+                Inline elements display next to each other 
+                if there is room &mdash; just like words in a sentence.
+            </li>
+        </ul>
+    </p>
+    <p>
+        If we float an element, we take it out of flow. 
+        For floated items, this means the item moves up 
+        until it encounters a block-level element; 
+        following elements then move up alongside the floated item.
+    </p>
+    <p>
+        In the following example, the line boxes wrap, 
+        but the background color will extend behind the floated item.
+    </p>
+    <section class="container">
+        <p>
+            I am a paragraph of text inside the container. 
+            I am in-flow. 
+            I sit before the floated item, 
+            so the following item moves up until my bottom.
+        </p>
+        <article class="box">
+            <p>
+                I am floated left.
+                I am out of flow.
+            </p>
+        </article>
+        <p>
+            I am a paragraph of text inside the container. 
+            I am in-flow. 
+            My text wraps around the float but my background color 
+            extends behind the floated item.
+        </p>
+    </section>
+</section>
+</body>
+</html>

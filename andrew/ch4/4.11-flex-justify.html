@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 4.11: Flex justify</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .cards {
+            margin: 0 -10px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            height: 50vh;
+        }
+
+        .cards li {
+            background-color: #e3fafc;
+            border: 1px solid #99e9f2;
+            margin: 0 10px 20px 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="example-header">
+        <ul class="meta">
+            <li class="book">The New CSS Layout</li>
+            <li class="author">Rachel Andrew</li>
+            <li class="chapter">Chapter 4</li>
+            <li class="index"><a href="../index.html">Index of examples</a></li>
+        </ul>
+        <div class="inner">
+            <h1>Align Flex Items</h1>
+        </div>
+    </header>
+    <section class="example">
+        <ul class="cards">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </section>
+    <section class="code">
+        <p>
+            The <code>justify-items</code> and <code>justify-self</code> properties 
+            do not apply in flexbox because we only have one axis, and 
+            the main axis might have multiple items on it. 
+            There may be times, however, when we want to space items out on the main axis; 
+            to do so, we need to space out the content itself.
+        </p>
+        <p>
+            For this, we use the <code>justify-content</code> property, 
+            which affects the entire flex container. 
+            The <code>justify-content</code> property acts on the main axis &mdash;
+            on the row if our <code>flex-direction</code> is <code>row</code>, 
+            on the column if <code>flex-direction</code> is <code>column</code>.
+        </p>
+        <p>
+            The initial value of <code>justify-content</code> is <code>flex-start</code>. 
+            That’s why, when you declare <code>display: flex</code> on the parent, 
+            if you do nothing else, your items will line up at the start of the flex container. 
+            If you set it to <code>flex-end</code>, your items will line up at the end.
+        </p>
+        <pre>
+            .cards {
+                margin: 0 -10px;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                justify-content: flex-end;
+                height: 50vh;
+            }
+
+            .cards li {
+                background-color: #e3fafc;
+                border: 1px solid #99e9f2;
+                margin: 0 10px 20px 10px;
+                padding: 10px;
+                border-radius: 5px;
+            }    
+        </pre>
+    </section>
+</body>
+</html>

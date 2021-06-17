@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 3.7: Absolute position</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .container {
+            width: 400px;
+            height: 250px;
+            border: 2px solid #e5dbff;
+            border-radius: 5px;
+            position: relative;
+        }
+        .box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 200px;
+            border: 2px solid #e5dbff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<section class="example">
+    <p>
+        If we want this box to be positioned inside the container, 
+        and to have the offsets calculated from the edge of the container, 
+        we need to establish a containing block on that container. 
+        We do this by adding <code>position: relative</code> to 
+        <code>.container</code>.
+    </p>
+    <section class="container">
+        <article class="box">
+            <p>
+                I am absolutely positioned 10 pixels from the top edge of 
+                my container and 10 pixels from the right-hand edge.
+            </p>
+        </article>
+    </section>
+</section>
+<section class="code">
+    <p>
+        If I remove <code>height: 250px;</code> in <code>.container</code>, 
+        the container will collapse, 
+        no longer respecting the height of the element inside. 
+        That’s because the box has been taken out of flow, so 
+        it doesn’t participate in layout decisions made by those elements.
+    </p>
+    <pre>
+        .container {
+            width: 400px;
+            height: 250px;
+            position: relative;
+            &hellip;
+        }
+        .box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 200px;
+            &hellip;
+        }
+    </pre>
+</section>
+
+</body>
+</html>

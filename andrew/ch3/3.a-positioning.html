@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 3.6: shape-outside</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<section class="example">
+    <dl>
+        <dt><code>position: static</code></dt>
+        <dd>
+            is the initial value for everything that loads on your page; 
+            static items are in flow and scroll with the document.
+            We only tend to use this value if we need to 
+            reset the position property on an element.
+        </dd>
+        <dt><code>position: relative</code></dt>
+        <dd>
+            With any of the offset properties of 
+            <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>, 
+            you can push the element around from its default position. 
+            The item that has <code>position: relative</code> 
+            on it establishes a new <strong>containing block</strong>.
+        </dd>
+        <dt><code>position: absolute</code></dt>
+        <dd>
+            An absolutely positioned item is taken out of flow, 
+            and can then be positioned from the edge of its containing block
+        </dd>
+        <dt><code>position: fixed</code></dt>
+        <dd>
+            enables items to assume a fixed place on screen as the document loads, 
+            and then stay in that place instead of scrolling with the rest of the page.
+            A common reason to use fixed positioning is to keep a menu on screen 
+            when scrolling through a long document.
+            Notice that the box is taken out of flow and so will overlap content.
+        </dd>
+        <dt><code>position: sticky</code></dt>
+        <dd>
+            acts as if it is static until the document scrolls to a certain point 
+            &mdash; at which time it acts as if it is fixed.
+        </dd>
+    </dl>
+</section>
+</body>
+</html>

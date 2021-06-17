@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 3.1: The float is out of flow</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .container {
+            width: 400px;
+            border: 2px solid #e5dbff;
+            border-radius: 5px;
+        }
+        .box {
+            float: left;
+            width: 200px;
+            border: 2px solid #e5dbff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<section class="example">
+    <p>
+        The outer container collapses because 
+        nothing is holding it open—the float is out of flow.
+    </p>
+    <section class="container">
+        <article class="box">
+            <p>I am floated left.</p>
+        </article>
+    </section>
+</section>
+</body>
+</html>

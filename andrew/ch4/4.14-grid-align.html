@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 4.14: Grid align</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .cards {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(4, 15%);
+            grid-template-rows: repeat(3, 80px);
+            height: 50vh;
+            grid-template-areas:
+                "a a a b"
+                "a a a b"
+                "c d d d";
+            grid-gap: 20px;
+            align-items: stretch;
+            align-content: stretch;
+            justify-content: stretch;
+        }
+
+        .one {
+            grid-area: a;
+        }
+
+        .two {
+            grid-area: b;
+        }
+
+        .three {
+            grid-area: c;
+        }
+
+        .four {
+            grid-area: d;
+        }
+
+        .cards li {
+            background-color: #e3fafc;
+            border: 1px solid #99e9f2;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        td {
+            padding: 0 1em;
+        }
+    </style>
+</head>
+<body>
+    <header class="example-header">
+        <ul class="meta">
+            <li class="book">The New CSS Layout</li>
+            <li class="author">Rachel Andrew</li>
+            <li class="chapter">Chapter 4</li>
+            <li class="index"><a href="../index.html">Index of examples</a></li>
+        </ul>
+        <div class="inner">
+            <h1>Align Grid Items</h1>
+        </div>
+    </header>
+    <section class="example">
+        <ul class="cards">
+            <li class="one">Item 1</li>
+            <li class="two">Item 2</li>
+            <li class="three">Item 3</li>
+            <li class="four">Item 4</li>
+        </ul>
+    </section>
+    <section class="code">
+        <p>
+            The <code>align-content</code> and <code>justify-content</code> properties 
+            affect the grid tracks in Grid Layout. 
+            As with <code>align-content</code> in flexbox, you need additional space 
+            in the grid container for these to work. 
+            You would have extra space in the container if you were using fixed-sized 
+            tracks &mdash; rather than the <code>fr</code> unit &mdash; and these 
+            tracks added up in total to a smaller height or width than that set on 
+            your grid container.
+        </p>
+        <table>
+            <tr>
+                <td>
+                    FIG 4.06: Grid stretch
+                </td>
+                <td>
+                    FIG 4.14: Grid align
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>
+.cards {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+
+    grid-template-areas:
+        "a a a b"
+        "a a a b"
+        "c d d d";
+    grid-gap: 20px;
+    align-items: stretch;
+
+
+}
+                    </pre>
+                </td>
+                <td>
+                    <pre>
+.cards {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 15%);
+    grid-template-rows: repeat(3, 80px);
+    height: 50vh;
+    grid-template-areas:
+        "a a a b"
+        "a a a b"
+        "c d d d";
+    grid-gap: 20px;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: stretch;
+}                                        
+                    </pre>
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 4.12: Flex align</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .cards {
+            margin: 0 -10px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            height: 50vh;
+            align-content: stretch;
+        }
+
+        .cards li {
+            background-color: #e3fafc;
+            border: 1px solid #99e9f2;
+            margin: 0 10px 20px 10px;
+            padding: 10px;
+            border-radius: 5px;
+            flex: 1 1 250px;
+        }
+
+        td {
+            padding: 0 1em;
+        }
+    </style>
+</head>
+<body>
+    <header class="example-header">
+        <ul class="meta">
+            <li class="book">The New CSS Layout</li>
+            <li class="author">Rachel Andrew</li>
+            <li class="chapter">Chapter 4</li>
+            <li class="index"><a href="../index.html">Index of examples</a></li>
+        </ul>
+        <div class="inner">
+            <h1>Align Flex Items</h1>
+        </div>
+    </header>
+    <section class="example">
+        <ul class="cards">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+        </ul>
+    </section>
+    <section class="code">
+        <p>
+            The <code>align-content</code> property works on the cross axis in flexbox, 
+            which will only have free space available if the following conditions are met:
+        </p>
+        <ul>
+            <li>
+                <code>flex-wrap</code> is <code>wrap</code>
+            </li>
+            <li>
+                the container is taller than the space needed to display the items
+            </li>
+        </ul>
+        <p>
+            If both of these things are true, you can use <code>align-content</code> 
+            in the same way as <code>justify-content</code>.
+        </p>
+        <p>
+            In this example, the initial value is <code>stretch</code>, so the 
+            items take up the available space in the flex container as they wrap. 
+        </p>
+        <table>
+            <tr>
+                <td>
+                    FIG 3.14: Flexbox wrap
+                </td>
+                <td>
+                    FIG 4.12: Flex align
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>
+.cards {
+    margin: 0 -10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+                    </pre>
+                </td>
+                <td>
+                    <pre>
+.cards {
+    margin: 0 -10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+    align-content: stretch;
+}                
+                    </pre>
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>

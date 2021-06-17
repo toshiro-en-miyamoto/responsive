@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 4.16: Flex margin</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .cards {
+            margin: 0 -10px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        .cards li {
+            background-color: #e3fafc;
+            border: 1px solid #99e9f2;
+            margin: 0 10px 20px 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .cards li:last-child {
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="example-header">
+        <ul class="meta">
+            <li class="book">The New CSS Layout</li>
+            <li class="author">Rachel Andrew</li>
+            <li class="chapter">Chapter 4</li>
+            <li class="index"><a href="../index.html">Index of examples</a></li>
+        </ul>
+        <div class="inner">
+            <h1>Alignment with auto margins</h1>
+        </div>
+    </header>
+    <section class="example">
+        <ul class="cards">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </section>
+    <section class="code">
+        <p>
+            If you’ve ever centered a block by setting the right and left margins to 
+            <code>auto</code>, you know that auto margins absorb any available space. 
+            By setting both at once, we have two margins that both want all the space, 
+            so the block ends up in the middle. 
+        </p>
+        <p>
+            We can apply that to a list of flex items. In the following example, 
+            I have a set of flex items displayed per the initial values of flexbox 
+            lined up on the left. 
+            If I give <code>last-child</code> a left margin of <code>auto</code>, 
+            that margin takes up all the space and pushes that one item over to the right.
+        </p>
+        <pre>
+            .cards {
+                margin: 0 -10px;
+                padding: 0;
+                list-style: none;
+                display: flex;
+            }
+
+            .cards li:last-child {
+                margin-left: auto;
+            }
+            </pre>
+    </section>
+</body>
+</html>

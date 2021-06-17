@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 4.01: Flex stretch</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .cards {
+            margin: 0 -10px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: stretch;
+            height: 50vh;
+        }
+
+        .cards li {
+            background-color: #e3fafc;
+            border: 1px solid #99e9f2;
+            margin: 0 10px 20px 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="example-header">
+        <ul class="meta">
+            <li class="book">The New CSS Layout</li>
+            <li class="author">Rachel Andrew</li>
+            <li class="chapter">Chapter 4</li>
+            <li class="index"><a href="../index.html">Index of examples</a></li>
+        </ul>
+        <div class="inner">
+            <h1>Align Flex Items</h1>
+        </div>
+    </header>
+    <section class="example">
+        <ul class="cards">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </section>
+    <section class="code">
+        <p>
+            I have four flex items in a container. 
+            The container is set to <code>50vh</code>, 
+            and the flex items stretch to fill it.
+            The items stretch by default because the initial value of 
+            <code>align-items</code> is <code>stretch</code>.
+        </p>
+        <pre>
+            .cards {
+                margin: 0 -10px;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                align-items: stretch;
+                height: 50vh;
+            }
+        </pre>
+    </section>
+</body>
+</html>

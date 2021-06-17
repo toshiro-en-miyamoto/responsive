@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 4.05: Flex column</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .cards {
+            margin: 0 -10px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            height: 50vh;
+        }
+
+        .cards li {
+            background-color: #e3fafc;
+            border: 1px solid #99e9f2;
+            margin: 0 10px 20px 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="example-header">
+        <ul class="meta">
+            <li class="book">The New CSS Layout</li>
+            <li class="author">Rachel Andrew</li>
+            <li class="chapter">Chapter 4</li>
+            <li class="index"><a href="../index.html">Index of examples</a></li>
+        </ul>
+        <div class="inner">
+            <h1>Align Flex Items</h1>
+        </div>
+    </header>
+    <section class="example">
+        <ul class="cards">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </section>
+    <section class="code">
+        <p>
+            Alignment works on items on the cross axis 
+            (also known as the block axis in CSS, and 
+            as the column axis in the Grid specification). 
+            Our flex items are displayed as a row; 
+            the cross axis runs across the row vertically, 
+            stretching the height of the flex container (FIG 4.4).
+        </p>
+        <p>
+            If we change the <code>flex-direction</code> to <code>column</code>, 
+            the cross axis becomes horizontal. 
+            Aligning our items to <code>flex-end</code> moves the column over 
+            to the right-hand side.
+        </p>
+        <pre>
+            .cards {
+                margin: 0 -10px;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                height: 50vh;
+            }
+        </pre>
+    </section>
+</body>
+</html>

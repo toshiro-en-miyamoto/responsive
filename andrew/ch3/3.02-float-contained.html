@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FIG 3.2: The float is contained</title>
+    <link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <style>
+        .container {
+            width: 400px;
+            border: 2px solid #e5dbff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .box {
+            float: left;
+            width: 200px;
+            border: 2px solid #e5dbff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        td {
+            padding: 0 1em;
+        }
+    </style>
+</head>
+<body>
+<section class="example">
+    <p>
+        If I do something that causes the container to create a new BFC, 
+        it will contain the floats.
+    </p>
+    <p>
+        The element that has become a new BFC must contain everything inside it, 
+        which is why the 
+        <code>overflow: hidden</code> trick works to contain floats.
+    </p>
+    <section class="container">
+        <article class="box">
+            <p>I am floated left.</p>
+        </article>
+    </section>
+</section>
+<section class="code">
+    <table>
+        <tr>
+            <td>FIG 3.1: The float is out of flow</td>
+            <td>FIG 3.2: The float is contained</td>
+        </tr>
+        <tr>
+            <td>
+                <pre>
+.container {
+    width: 400px;
+    border: 2px solid #e5dbff;
+    border-radius: 5px;
+
+}
+.box {
+    float: left;
+    width: 200px;
+    border: 2px solid #e5dbff;
+    border-radius: 5px;
+    padding: 10px;
+}
+                </pre>
+            </td>
+            <td>
+                <pre>
+.container {
+    width: 400px;
+    border: 2px solid #e5dbff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.box {
+    float: left;
+    width: 200px;
+    border: 2px solid #e5dbff;
+    border-radius: 5px;
+    padding: 10px;
+} 
+                </pre>
+            </td>
+        </tr>
+    </table>
+</section>
+</body>
+</html>
