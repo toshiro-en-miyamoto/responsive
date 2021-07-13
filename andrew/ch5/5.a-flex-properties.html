@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Flex properties</title>
+	<link rel="stylesheet" href="../common.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<section class="code">
+    <h2>Controlling Sizing with the <code>flex</code> properties</h2>
+    <p>
+        To control the sizing of flex items, we need to add rules to the flex items themselves, 
+        and we do this by using three properties. 
+        Note that the <code>flex-direction</code> property sets how flex items are placed 
+        in the flex container defining the main axis and the direction. 
+    </p>
+    <dl>
+        <dt><code>flex-basis</code></dt>
+        <dd>
+            can be used to set a width (if <code>flex-direction</code> is <code>row</code>) or 
+            height (if <code>flex-direction</code> is <code>column</code>) for the flex item. 
+            If you give all items a <code>flex-basis</code> of 200 pixels, 
+            the browser will assign 200 pixels of space to each item.
+        </dd>
+        <dt><code>flex-grow</code></dt>
+        <dd>
+            defines whether an item can grow larger than the size set in <code>flex-basis</code>. 
+            If you set <code>flex-grow</code> to 1, you allow items to grow larger than 200 pixels 
+            in order to take up any free space in the flex container.
+        </dd>
+        <dt><code>flex-shrink</code></dt>
+        <dd>
+            determines whether an item can shrink smaller than the <code>flex-basis</code> value. 
+            If you have a non-wrapping 500-pixel-width container and three items with a 
+            <code>flex-basis</code> of 200 pixels, they will overflow 
+            unless <code>flex-shrink</code> is greater than 0.
+        </dd>
+    </dl>
+    <p>
+        The specification advises that authors use the <strong><code>flex</code> shorthand</strong> 
+        rather than the individual properties of 
+        <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>. 
+        Given their interaction with one another, it’s certainly easier to see 
+        what you’re doing if you treat these three values as one property. 
+        Therefore, use the <code>flex</code> property rather than the individual components; 
+        the order of the values is as follows:
+    </p>
+    <ol>
+        <li><code>flex-grow</code></li>
+        <li><code>flex-shrink</code></li>
+        <li><code>flex-basis</code></li>
+    </ol>
+</section>
+</body>
+</html>
